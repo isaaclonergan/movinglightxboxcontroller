@@ -71,10 +71,6 @@ if __name__ == "__main__":
             Y = (joy.LeftJoystickY)
         else:
             Y = 0
-
-        #X=float(input("X Value: "))
-        #Y=float(input("Y Value: "))
-
         tilt=sqrt(X**2+Y**2)
         chord=sqrt((0-X)**2 + (tilt-Y)**2)
         try:
@@ -85,7 +81,7 @@ if __name__ == "__main__":
             else:
                 angle=2*(asin(chord/(2*tilt)))
         except:
-            print("something went wrong to make this zero")
+            print("Something went wrong to make this zero")
             input("Confirm")
             angle=0
         finaltilt = str(int(round(tilt*90, 0)))
